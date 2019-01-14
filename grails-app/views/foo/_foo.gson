@@ -1,0 +1,9 @@
+import four.Foo
+
+model {
+    Foo foo
+}
+
+json {
+    name foo.name
+}

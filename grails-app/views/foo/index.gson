@@ -1,0 +1,11 @@
+import four.Foo
+
+model {
+    Foo foo
+    Long bar
+}
+
+json {
+    foo g.render(foo)
+    bar bar
+}

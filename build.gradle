@@ -8,6 +8,7 @@ buildscript {
         classpath "org.grails.plugins:hibernate5:${gormVersion-".RELEASE"}"
         classpath "gradle.plugin.com.energizedwork.webdriver-binaries:webdriver-binaries-gradle-plugin:1.4"
         classpath "com.bertramlabs.plugins:asset-pipeline-gradle:3.0.7"
+        classpath "org.grails.plugins:views-gradle:2.0.0.BUILD-SNAPSHOT"
     }
 }
 
@@ -18,8 +19,10 @@ apply plugin:"eclipse"
 apply plugin:"idea"
 apply plugin:"war"
 apply plugin:"org.grails.grails-web"
+apply plugin: "org.grails.plugins.views-json"
 apply plugin:"com.energizedwork.webdriver-binaries"
 apply plugin:"org.grails.grails-gsp"
+
 apply plugin:"com.bertramlabs.asset-pipeline"
 
 repositories {
@@ -75,6 +78,13 @@ dependencies {
     runtime "org.apache.tomcat:tomcat-jdbc"
     runtime "javax.xml.bind:jaxb-api:2.3.0"
     runtime "com.bertramlabs.plugins:asset-pipeline-grails:3.0.7"
+
+
+
+    compile "org.grails.plugins:views-json:2.0.0.BUILD-SNAPSHOT"
+
+
+
     testCompile "org.grails:grails-gorm-testing-support"
     testCompile "org.mockito:mockito-core"
     testCompile "org.grails:grails-web-testing-support"
